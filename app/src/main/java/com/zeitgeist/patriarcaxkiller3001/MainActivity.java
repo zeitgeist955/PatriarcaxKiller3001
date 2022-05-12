@@ -19,11 +19,12 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Joke> jokeList;
     private int jokeIndex;
+    private Joke currentJoke;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_main);
 
         generateJokeButton = findViewById(R.id.generateJokeButton);
         jokeTitle = findViewById(R.id.jokeTitle);
@@ -36,8 +37,14 @@ public class MainActivity extends AppCompatActivity {
         generateJokeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                jokeTitle.setText(jokeList.get(jokeIndex).getTitle());
-                jokeContent.setText(jokeList.get(jokeIndex).getContent());
+                currentJoke = jokeList.get(jokeIndex);
+
+                if (JokeTypeEnum.TEXT.equals(currentJoke.getJokeType())) {
+                    jokeTitle.setText(currentJoke.getTitle());
+                    jokeContent.setText(currentJoke.getContent());
+                } else if (JokeTypeEnum.MEME.equals(currentJoke.getJokeType())) {
+                    //TODO manage meme and picture display
+                }
 
                 //simply comment this line to hide the display of the joke index
                 jokeIndexTextView.setText("Debug : blague numéro "+Integer.toString(jokeIndex));

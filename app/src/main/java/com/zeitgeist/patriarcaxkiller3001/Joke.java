@@ -6,14 +6,18 @@ public class Joke {
 
     }
 
+    //Vanne constructor
     public Joke(String title, String content) {
         this.title = title;
         this.content = content;
+        this.jokeType = JokeTypeEnum.TEXT;
     }
 
     private String title;
 
     private String content;
+
+    private JokeTypeEnum jokeType;
 
     public String getTitle() {
         return title;
@@ -29,5 +33,13 @@ public class Joke {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public JokeTypeEnum getJokeType() {
+        return jokeType;
+    }
+
+    public void setJokeType(JokeTypeEnum jokeType) {
+        this.jokeType = jokeType;
     }
 }

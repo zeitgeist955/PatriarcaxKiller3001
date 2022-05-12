@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/jokeTitle"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center_horizontal"
+        android:padding="8dp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/jokeContent"
+        android:layout_width="350dp"
+        android:layout_height="400dp"
+        android:layout_marginVertical="10dp"
+        android:layout_gravity="center_horizontal"
+        android:padding="8dp"
+        android:text=""/>
+
+    <Button
+        android:id="@+id/generateJokeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Générer une blague"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/jokeIndexTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_margin="30dp"
+        android:layout_gravity="right"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
